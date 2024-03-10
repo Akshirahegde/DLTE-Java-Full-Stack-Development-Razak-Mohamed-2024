@@ -12,6 +12,7 @@ public class FileStorageTarget implements StorageTarget {
 
     @Override
     public TransactionRepository getTransactionRepository() {
+
         return null;
     }
 }

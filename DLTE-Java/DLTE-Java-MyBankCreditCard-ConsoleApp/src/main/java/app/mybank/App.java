@@ -113,6 +113,25 @@ public class App
                             System.out.println(creditCardException);
                         }
                         break;
+                    case 6:
+                        System.out.println("Filter by Date");
+                        System.out.println("Enter date");
+                        Date date=new Date(scanner.next());
+                        try{
+                            System.out.println(transactionService.callFindAllByDate(date));
+                        }catch (TransactionException transactionException){
+                            System.out.println(transactionException);
+                        }
+                        break;
+                    case 7:
+                        System.out.println("Find Merchant By given ID");
+                        try{
+                            System.out.println(transactionService.callFindMerchantByID(scanner.nextInt()));
+                        }catch (TransactionException transactionException){
+                            System.out.println(transactionException);
+                        }
+                        break;
+
                     default:return;
                 }
             }while (true);
